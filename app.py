@@ -322,7 +322,7 @@ def task_runner(task: str):
         
     }
 
-    response = requests.post(url=AIPROXY_URL, headers=headers, json=data)
+    response = requests.post(url=url, headers=headers, json=data)
 
     if response.status_code != 200:
         raise HTTPException(status_code=500, detail="Failed to get a valid response from LLM")
